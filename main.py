@@ -20,5 +20,3 @@ if __name__ == '__main__':
 
     cert_path = ssl.get_default_verify_paths()
     print("cert_path: ", cert_path)
-    ssl.SSLContext().load_default_certs()
-    ssl.create_default_context()
