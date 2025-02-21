@@ -124,6 +124,7 @@ jobs:
         with:
           files: o/koipy-${{ matrix.platform }}-amd64.zip
           tag_name: v1.0.0
+          token: ${{ github.token }}
 
 
   build-windows:
@@ -263,4 +264,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: o/koipy-${{ matrix.platform }}-amd64.zip
-          tag_name: v1.0.0
+          tag_name: 1.0.0
+          token: ${{ github.token }}
+
