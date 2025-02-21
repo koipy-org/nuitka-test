@@ -123,8 +123,8 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: o/koipy-${{ matrix.platform }}-amd64.zip
-          tag_name: v1.0.0
-          token: ${{ github.token }}
+          tag_name: 1.0.0
+          token: ${{ secrets.GH_TOKEN }}
 
 
   build-windows:
@@ -187,7 +187,6 @@ jobs:
           Remove-Item -Recurse -Path o/main.dist/test
           Remove-Item -Recurse -Path o/main.dist/config-3.11* 
           Remove-Item -Recurse -Path o/main.dist/__pycache__
-          Remove-Item -Recurse -Path o/main.dist/setuptools
 
         shell: pwsh
       - name: mkdir dist-info floder
@@ -265,5 +264,5 @@ jobs:
         with:
           files: o/koipy-${{ matrix.platform }}-amd64.zip
           tag_name: 1.0.0
-          token: ${{ github.token }}
+          token: ${{ secrets.GH_TOKEN }}
 
