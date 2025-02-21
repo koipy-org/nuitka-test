@@ -152,7 +152,7 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install -r requirements.txt
-      - uses: Nuitka/Nuitka-Action@main
+      - uses: Nuitka/Nuitka-Action@2.6.6
         with:
           script-name: main.py
           mode: standalone
